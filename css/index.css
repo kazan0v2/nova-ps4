@@ -980,25 +980,21 @@ body {
   .checkbox-group label {
     min-width: 150px;
   }
+/* تثبيت الخلفية وجعل الصفحة شفافة */
+#fixed-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover; background-position: center;
+    z-index: -9999;
 }
-/* === كود تثبيت الخلفية الشامل === */
-body, html, .modal, #log-area, #msgs {
-    background-image: url('bg.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
+html, body, #main, .content {
+    background: transparent !important;
+    background-color: transparent !important;
 }
-
-/* === جعل خلفية الكلام (Logs) شفافة عشان الصورة تبان === */
-#log, #msgs, pre, .console, div[id*="log"] {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* لون أسود شفاف */
+/* تنسيق الكلام عشان يظهر بوضوح فوق الصورة */
+#log, #msgs, pre, .console {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* خلفية سوداء شفافة للكلام */
+    text-shadow: 1px 1px 2px black; /* ظل للكلام */
     border: none !important;
-    color: white !important; /* لون الخط أبيض */
-    text-shadow: 2px 2px 4px #000000; /* ظل للكلام عشان يظهر بوضوح فوق الصورة */
-}
-
-/* === إخفاء أي طبقة سوداء إضافية === */
-.overlay, .black-screen {
-    display: none !important;
 }
