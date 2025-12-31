@@ -1005,3 +1005,8 @@ html, body {
 .overlay, .black-screen {
     display: none !important;
 }
+/* كود تغيير لون إصدار الجهاز */
+h2#PS4FW {
+    color: white !important; /* هنا اللون الأبيض بالإجبار */
+    text-shadow: 2px 2px 5px black !important;
+}
