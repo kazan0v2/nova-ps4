@@ -941,47 +941,32 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  .header-title { 
-    font-size: 1.3em; 
-    padding: 5px 14px;
-  }
-  
-  .ps-btn { 
-    width: 90px; 
-    height: 90px;
-  }
-  
-  .ps-btn svg { 
-    width: 44px; 
-    height: 44px;
-  }
-  
-  .floating-menu-payloads {
-    width: 90vw;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #button-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .radio-group {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .checkbox-group {
-    flex-direction: column;
-    align-items: center;
-  }
-  
+/* إغلاق قوس الموبايل السابق بشكل صحيح */
   .checkbox-group label {
     min-width: 150px;
   }
-}body {
-    background-image: url('bg.jpg') !important;
+}
+
+/* ========================================= */
+/* === بداية كود الخلفية والشفافية الجديد === */
+/* ========================================= */
+
+/* 1. تثبيت الصورة وإلغاء اللون الأسود */
+html, body {
+    background: url('bg.jpg') no-repeat center center fixed !important; 
     background-size: cover !important;
-    background-position: center !important;
+    background-color: transparent !important; /* مهم جداً عشان يلغي الشاشة السوداء */
+}
+
+/* 2. جعل لوحة التحكم (الكونسول) شفافة */
+#console, .console, #msgs, #log-area, pre {
+    background-color: rgba(0, 0, 0, 0.6) !important; /* أسود شفاف */
+    border: 1px solid #FFB84D !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px black; /* ظل للكلام */
+}
+
+/* 3. إخفاء أي طبقة تعتيم إضافية */
+.overlay, .black-screen {
+    display: none !important;
 }
