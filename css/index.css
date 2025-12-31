@@ -981,14 +981,24 @@ body {
     min-width: 150px;
   }
 }
-body {
-    background-image: url('bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    color: white; /* هذا ليجعل الكلام أبيض ليظهر فوق الصورة */
+/* === كود تثبيت الخلفية الشامل === */
+body, html, .modal, #log-area, #msgs {
+    background-image: url('bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
+/* === جعل خلفية الكلام (Logs) شفافة عشان الصورة تبان === */
+#log, #msgs, pre, .console, div[id*="log"] {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* لون أسود شفاف */
+    border: none !important;
+    color: white !important; /* لون الخط أبيض */
+    text-shadow: 2px 2px 4px #000000; /* ظل للكلام عشان يظهر بوضوح فوق الصورة */
+}
+
+/* === إخفاء أي طبقة سوداء إضافية === */
+.overlay, .black-screen {
+    display: none !important;
 }
