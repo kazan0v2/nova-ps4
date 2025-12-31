@@ -980,21 +980,32 @@ body {
   .checkbox-group label {
     min-width: 150px;
   }
-/* تثبيت الخلفية وجعل الصفحة شفافة */
-#fixed-background {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background-image: url('bg.jpg');
-    background-size: cover; background-position: center;
-    z-index: -9999;
+/* ========================================= */
+/* === الكود النهائي: صورة + شفافية === */
+/* ========================================= */
+
+/* 1. وضع الصورة في الخلفية */
+body, html {
+    background-image: url('bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-color: #222222;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
-html, body, #main, .content {
-    background: transparent !important;
-    background-color: transparent !important;
+
+/* 2. أهم جزء: جعل الصندوق الأسود (الكونسول) شفاف عشان الصورة تبان */
+#console, .console, #msgs, pre, #log-area, .header-title {
+    background-color: rgba(0, 0, 0, 0.6) !important; /* أسود شفاف */
+    border: 1px solid #FFB84D !important;
+    color: #FFF !important;
+    text-shadow: 2px 2px 4px black; /* ظل للكلام */
 }
-/* تنسيق الكلام عشان يظهر بوضوح فوق الصورة */
-#log, #msgs, pre, .console {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* خلفية سوداء شفافة للكلام */
-    text-shadow: 1px 1px 2px black; /* ظل للكلام */
-    border: none !important;
+
+/* 3. إخفاء أي طبقة تعتيم زيادة */
+.overlay, .black-screen {
+    display: none !important;
 }
