@@ -1058,26 +1058,21 @@ html, body {
   animation: rgb-border 5s infinite linear; /* نفس حركة الألوان للباقي */
   font-weight: bold;
 }
-/* 1. حجم الدائرة للشاشات الكبيرة (بلايستيشن ولابتوب) */
-@media (min-width: 601px) {
-  .ps-btn {
-    width: 50px !important;  /* الحجم الكبير اللي أنت عايزه للبلايستيشن */
-    height: 50px !important;
-  }
-  .ps-btn svg {
-    width: 60px !important;
-    height: 60px !important;
-  }
+/* تصغير الدائرة مع الحفاظ على السنتر وعدم تحريك الجملة */
+#jailbreak {
+  width: 90px !important;       /* الحجم الجديد */
+  height: 90px !important;
+  
+  /* السطرين الجايين هما السر عشان المكان مايبوظش */
+  transform: none !important;   /* إلغاء الإزاحة القديمة اللي كانت بترحله */
+  margin: 0 auto !important;    /* إجبار الزرار يفضل في نص العمود */
+  
+  /* تظبيط المسافة بين الدائرة والجملة اللي تحتها */
+  margin-bottom: 15px !important; 
 }
 
-/* 2. حجم الدائرة للموبايلات والشاشات الصغيرة */
-@media (max-width: 600px) {
-  .ps-btn {
-    width: 80px !important;   /* حجم صغير مناسب للموبايل */
-    height: 80px !important;
-  }
-  .ps-btn svg {
-    width: 40px !important;
-    height: 40px !important;
-  }
+/* تصغير الأيقونة اللي جوه الدائرة */
+#jailbreak svg {
+  width: 45px !important;
+  height: 45px !important;
 }
