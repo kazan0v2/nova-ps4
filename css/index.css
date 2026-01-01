@@ -1058,13 +1058,13 @@ html, body {
   animation: rgb-border 5s infinite linear; /* نفس حركة الألوان للباقي */
   font-weight: bold;
 }
-/* إخفاء الدائرة (مع الحفاظ على مكانها عشان التنسيق مايبوظش) */
+/* جعل الدائرة شفافة تماماً (عشان السكريبت يقدر يدوس عليها) */
 #jailbreak {
-  visibility: hidden !important; /* الزرار موجود بس شفاف */
-  pointer-events: none;          /* عشان محدش يدوس عليه بالغلط */
+  opacity: 0 !important; /* شفاف بدل مخفي */
+  pointer-events: auto !important; /* السماح بالضغط عليه */
 }
 
-/* إخفاء الأيقونة اللي جواه كمان */
+/* إخفاء الأيقونة الداخلية */
 #jailbreak svg {
-  visibility: hidden !important;
+  opacity: 0 !important;
 }
