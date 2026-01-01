@@ -25,17 +25,66 @@ body {
   pointer-events: none;
 }
 
+/* ده كود المربع اللي فوق مع حركة الألوان */
 .header-title {
-  color: #FFF;
-  font-size: 20px;
+  font-size: 30px; /* حجم الخط */
   font-weight: bold;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 15px #FFB84D;
-  background: #6f707433;
-  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.5); /* خلفية سوداء شفافة عشان الكلام يبان */
+  border-radius: 18px; /* تدويرة الحواف */
   padding: 10px 48px;
   pointer-events: auto;
-  border: 3px solid #FFB84D; 
+  
+  /* هنا السحر كله: سمك الحدود 3 بيكسل، ونوع الحركة */
+  border: 3px solid; 
+  animation: rgb-border 5s infinite linear; /* سرعة الحركة 5 ثواني */
+}
+
+/* ده موتور الحركة اللي بيقلب الألوان (أحمر، أصفر، أخضر، أزرق، موف) */
+@keyframes rgb-border {
+  0% { 
+    border-color: #ff0000; 
+    color: #ff0000; 
+    box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+  }
+  20% { 
+    border-color: #ffff00; 
+    color: #ffff00; 
+    box-shadow: 0 0 15px #ffff00, inset 0 0 10px #ffff00;
+    text-shadow: 0 0 5px #ffff00;
+  }
+  40% { 
+    border-color: #00ff00; 
+    color: #00ff00; 
+    box-shadow: 0 0 15px #00ff00, inset 0 0 10px #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+  }
+  60% { 
+    border-color: #00ffff; 
+    color: #00ffff; 
+    box-shadow: 0 0 15px #00ffff, inset 0 0 10px #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+  }
+  80% { 
+    border-color: #ff00ff; 
+    color: #ff00ff; 
+    box-shadow: 0 0 15px #ff00ff, inset 0 0 10px #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+  }
+  100% { 
+    border-color: #ff0000; 
+    color: #ff0000; 
+    box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+  }
+}/* كود زرار About عشان ينور RGB زي المربع التاني */
+#about-btn {
+  background: rgba(0, 0, 0, 0.5) !important; /* خلفية شفافة عشان يبان النور */
+  border: 3px solid;
+  border-radius: 15px; /* تدويرة الحواف */
+  animation: rgb-border 5s infinite linear; /* نفس الحركة بتاعت المربع التاني */
+  font-weight: bold;
 }
 
 /* Center Button */
@@ -985,4 +1034,11 @@ html, body {
     background: url('../bg.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
     background-color: #222222 !important; /* لون احتياطي لو الصورة لسة بتحمل */
+}
+/* كود المستطيل الكبير اللي تحت (الكونسول) عشان ينور RGB */
+#console {
+  border: 3px solid !important;       /* تكبير سمك البرواز ليظهر بوضوح */
+  background: rgba(0, 0, 0, 0.5) !important; /* خلفية سوداء شفافة */
+  animation: rgb-border 5s infinite linear;  /* ربطه بموتور الألوان */
+  box-shadow: none !important;        /* إلغاء أي ظل قديم */
 }
