@@ -1061,8 +1061,8 @@ html, body {
 /* 1. حجم الدائرة للشاشات الكبيرة (بلايستيشن ولابتوب) */
 @media (min-width: 601px) {
   .ps-btn {
-    width: 120px !important;  /* الحجم الكبير اللي أنت عايزه للبلايستيشن */
-    height: 120px !important;
+    width: 50px !important;  /* الحجم الكبير اللي أنت عايزه للبلايستيشن */
+    height: 50px !important;
   }
   .ps-btn svg {
     width: 60px !important;
