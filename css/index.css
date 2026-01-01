@@ -980,33 +980,9 @@ body {
   .checkbox-group label {
     min-width: 150px;
   }
-}
-
-/* ========================================= */
-/* === FINAL FIXED BACKGROUND & TRANSPARENCY === */
-/* ========================================= */
-
+}/* === كود خلفية الصفحة (أونلاين وأوفلاين) === */
 html, body {
     background: url('bg.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
-    background-color: transparent !important; /* Forces transparency so image shows */
-    overflow: hidden;
-}
-
-/* Make console, logs, and headers transparent */
-#console, .console, #msgs, pre, #log-area, .header-title {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    border: 1px solid #FFB84D !important;
-    color: #FFF !important;
-    text-shadow: 2px 2px 4px black;
-}
-
-/* Hide overlays */
-.overlay, .black-screen {
-    display: none !important;
-}
-/* كود تغيير لون إصدار الجهاز */
-h2#PS4FW {
-    color: white !important; /* هنا اللون الأبيض بالإجبار */
-    text-shadow: 2px 2px 5px black !important;
+    background-color: #222222 !important; /* لون احتياطي لو الصورة لسة بتحمل */
 }
