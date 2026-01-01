@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html manifest="./NOVA PS.manifest">
+<html manifest="./NOVA PS">
   <head>
     <script>
         function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.title="Installing offline cache: " + Percent + "%";}
-        function DisplayCacheProgress(){setTimeout(function(){;document.title="Cache Success !";},1000);setTimeout(function(){window.location.href = document.referrer;},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+        function DisplayCacheProgress(){setTimeout(function(){;document.title="NOVA PS Host !";},1000);setTimeout(function(){window.location.href = document.referrer;},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
     </script>
     <meta charset="UTF-8">
     <title>NOVA PS</title>
@@ -15,6 +15,7 @@
       <button onclick="showpayloads()" class="menu-btn" id="payloadsbtn">Payloads</button>
       <button class="menu-btn" id="generate-cache-btn">Force-Cache</button>
       <button class="menu-btn" id="update-exploit">Update-Exploit</button>
+      <button onclick="showsettings()" class="menu-btn" id="settings-btn">Settings</button>
       <button onclick="showabout()" class="menu-btn" id="about-btn">About</button>
     </div>
 
