@@ -1058,13 +1058,20 @@ html, body {
   animation: rgb-border 5s infinite linear; /* نفس حركة الألوان للباقي */
   font-weight: bold;
 }
-/* جعل الدائرة شفافة تماماً (عشان السكريبت يقدر يدوس عليها) */
+/* كود الشبح: بيخلي الزرار شفاف 100% بس شغال 100% */
 #jailbreak {
-  opacity: 0 !important; /* شفاف بدل مخفي */
-  pointer-events: auto !important; /* السماح بالضغط عليه */
+  opacity: 0 !important;           /* شفاف تماماً (عينك مش هتشوفه) */
+  pointer-events: auto !important; /* مسموح بالضغط عليه (عشان الأوتو يشتغل) */
+  
+  /* تظبيط الحجم والمكان عشان الصفحة شكلها مايبوظش */
+  width: 90px !important;
+  height: 90px !important;
+  margin: 0 auto !important;       /* يفضل في النص */
+  transform: none !important;      /* إلغاء أي إزاحة قديمة */
+  cursor: default !important;      /* عشان شكل الماوس مايتغيرش */
 }
 
-/* إخفاء الأيقونة الداخلية */
+/* إخفاء الأيقونة اللي جوه الدائرة كمان */
 #jailbreak svg {
   opacity: 0 !important;
 }
