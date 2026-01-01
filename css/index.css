@@ -982,7 +982,7 @@ body {
   }
 }/* === كود خلفية الصفحة (أونلاين وأوفلاين) === */
 html, body {
-    background: url('bg.jpg') no-repeat center center fixed !important;
+    background: url('../bg.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
     background-color: #222222 !important; /* لون احتياطي لو الصورة لسة بتحمل */
 }
