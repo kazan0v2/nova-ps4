@@ -92,7 +92,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -100%);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -1049,4 +1049,35 @@ html, body {
   border-radius: 15px;
   animation: rgb-border 5s infinite linear; /* نفس حركة الألوان */
   font-weight: bold;
+}
+/* كود زرارين Force-Cache و Update-Exploit مع بعض */
+#generate-cache-btn, #update-exploit {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 3px solid;
+  border-radius: 15px;
+  animation: rgb-border 5s infinite linear; /* نفس حركة الألوان للباقي */
+  font-weight: bold;
+}
+/* 1. حجم الدائرة للشاشات الكبيرة (بلايستيشن ولابتوب) */
+@media (min-width: 601px) {
+  .ps-btn {
+    width: 120px !important;  /* الحجم الكبير اللي أنت عايزه للبلايستيشن */
+    height: 120px !important;
+  }
+  .ps-btn svg {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* 2. حجم الدائرة للموبايلات والشاشات الصغيرة */
+@media (max-width: 600px) {
+  .ps-btn {
+    width: 80px !important;   /* حجم صغير مناسب للموبايل */
+    height: 80px !important;
+  }
+  .ps-btn svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
