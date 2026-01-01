@@ -1058,21 +1058,13 @@ html, body {
   animation: rgb-border 5s infinite linear; /* نفس حركة الألوان للباقي */
   font-weight: bold;
 }
-/* تصغير الدائرة مع الحفاظ على السنتر وعدم تحريك الجملة */
+/* إخفاء الدائرة (مع الحفاظ على مكانها عشان التنسيق مايبوظش) */
 #jailbreak {
-  width: 90px !important;       /* الحجم الجديد */
-  height: 90px !important;
-  
-  /* السطرين الجايين هما السر عشان المكان مايبوظش */
-  transform: none !important;   /* إلغاء الإزاحة القديمة اللي كانت بترحله */
-  margin: 0 auto !important;    /* إجبار الزرار يفضل في نص العمود */
-  
-  /* تظبيط المسافة بين الدائرة والجملة اللي تحتها */
-  margin-bottom: 15px !important; 
+  visibility: hidden !important; /* الزرار موجود بس شفاف */
+  pointer-events: none;          /* عشان محدش يدوس عليه بالغلط */
 }
 
-/* تصغير الأيقونة اللي جوه الدائرة */
+/* إخفاء الأيقونة اللي جواه كمان */
 #jailbreak svg {
-  width: 45px !important;
-  height: 45px !important;
+  visibility: hidden !important;
 }
