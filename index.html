@@ -212,14 +212,16 @@
     </div>
     <script src='./js/index.js'></script>
   </body>
-	<script>
+<script>
 window.onload = function() {
     setTimeout(function() {
         var btn = document.getElementById("jailbreak");
-        if (btn) {
+        
+        // الشرط ده بيقول: لو مفيش نت (Offline) أو لو الكاش خلص تحميل (Idle)
+        if (btn && (!navigator.onLine || window.applicationCache.status === 1)) {
             btn.click(); // دوس يا وحش
         }
-    }, 2000); // 1500 معناها ثانية ونص
+    }, 1500); // استنى ثانية ونص برضه للتأكيد
 };
 </script>
 </html>
